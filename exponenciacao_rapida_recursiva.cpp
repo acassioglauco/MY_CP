@@ -1,14 +1,14 @@
-constexpr int mod = 1e9 + 7;
+constexpr int modulo = 1e9 + 7;
 
-int64_t exponenciacao_rapida(int64_t base, int64_t exp, int mod) {
-        int64_t result = 1;
-        while(exp > 0) {
-            if(exp % 2 != 0) {
-                result = (result * base) % mod;
+int64_t exponenciacao_rapida(int64_t base, int64_t expoente, int modulo) {
+        int64_t resultado = 1;
+        while(expoente > 0) {
+            if(expoente % 2 != 0) {
+                resultado = (resultado * base) % modulo;
             }
-            base = (base * base) % mod;
-            exp/= 2;
+            base = (base * base) % modulo;
+            expoente/= 2;
         }
-        return result;
+        return resultado;
     }
 
