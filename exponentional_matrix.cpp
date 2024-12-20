@@ -1,8 +1,8 @@
 const int MOD = 1000000007;
 
 // Função para multiplicar duas matrizes 2x2 (mod MOD)
-vector<vector<long long>> multiply(const vector<vector<long long>> &A, const vector<vector<long long>> &B) {
-    vector<vector<long long>> result(2, vector<long long>(2, 0));
+vector<vector<int64_t> > multiply(const vector<vector<int64_t> > &A, const vector<vector<int64_t> > &B) {
+    vector<vector<int64_t> > result(2, vector<int64_t>(2, 0));
     for (int i = 0; i < 2; ++i) {
         for (int j = 0; j < 2; ++j) {
             for (int k = 0; k < 2; ++k) {
@@ -14,8 +14,8 @@ vector<vector<long long>> multiply(const vector<vector<long long>> &A, const vec
 }
 
 // Função para realizar a exponenciação de matriz
-vector<vector<long long>> matrix_exponentiation(vector<vector<long long>> matrix, long long power) {
-    vector<vector<long long>> result = {{1, 0}, {0, 1}}; // Matriz identidade
+vector<vector<int64_t> > matrix_exponentiation(vector<vector<int64_t> > matrix, long long power) {
+    vector<vector<int64_t> > result = {{1, 0}, {0, 1}}; // Matriz identidade
     while (power) {
         if (power % 2 == 1) {
             result = multiply(result, matrix);
