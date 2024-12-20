@@ -10,5 +10,5 @@ int64_t exponenciacao_rapida(int64_t base, int64_t expoente, int modulo) {
             expoente/= 2;
         }
         return resultado;
-    }
+}
 
